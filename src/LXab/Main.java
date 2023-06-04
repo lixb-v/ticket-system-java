@@ -26,7 +26,7 @@ public class Main {
 //        myCinemaController.updateChiemaById(16, "新飞扬影院", "正佳广场", "9：00", "3：00");
 
 
-        
+
 
         // 注册程序关闭hook
         Runtime.getRuntime().addShutdownHook(new ShutdownHook());
