@@ -1,10 +1,10 @@
-package src.LXab.controller;
+package LXab.controller;
 
 import java.util.List;
 import java.sql.SQLException;
 
-import src.LXab.dao.CinemaDao;
-import src.LXab.entity.Cinema;
+import LXab.dao.CinemaDao;
+import LXab.entity.Cinema;
 public class CinemaController {
 
     /**
@@ -22,9 +22,9 @@ public class CinemaController {
      * 根据id查询电影院
      * */
 
-    public void queryCinemaById(int id) {
+    public Cinema queryCinemaById(int id) {
         Cinema myCinema = new CinemaDao().queryCinemaById(id);
-        System.out.println(myCinema.toString());
+        return myCinema;
     }
 
     /**

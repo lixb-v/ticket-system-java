@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+    <servlet>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>LXab.servlet.Demo</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CinemaServlet</servlet-name>
+        <servlet-class>LXab.servlet.CinemaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CinemaServlet</servlet-name>
+        <url-pattern>/queryCinemaById</url-pattern>
+    </servlet-mapping>
+
+</web-app>

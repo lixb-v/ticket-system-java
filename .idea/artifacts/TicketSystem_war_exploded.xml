@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TicketSystem:war exploded">
+    <output-path>$PROJECT_DIR$/WebContent/WEB-INF/classes/artifacts/</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TicketSystem" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="TicketSystem/web/Web" />
+    </root>
+  </artifact>
+</component>

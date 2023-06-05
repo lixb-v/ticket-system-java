@@ -1,14 +1,15 @@
-package src.LXab;
+package LXab;
 
-import src.LXab.controller.CinemaController;
-import src.LXab.utils.ShutdownHook;
+import LXab.controller.CinemaController;
+import LXab.utils.ShutdownHook;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        CinemaController myCinemaController = new CinemaController();
+        System.out.println("1");
+//        CinemaController myCinemaController = new CinemaController();
         // 根据id查找影院
 //        myCinemaController.queryCinemaById(2);
 
@@ -29,7 +30,7 @@ public class Main {
 
 
         // 注册程序关闭hook
-        Runtime.getRuntime().addShutdownHook(new ShutdownHook());
+//        Runtime.getRuntime().addShutdownHook(new ShutdownHook());
 
     }
 

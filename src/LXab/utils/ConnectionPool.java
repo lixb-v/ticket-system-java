@@ -1,4 +1,4 @@
-package src.LXab.utils;
+package LXab.utils;
 
 import java.sql.SQLException;
 import java.sql.PreparedStatement;

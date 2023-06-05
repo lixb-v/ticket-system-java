@@ -1,4 +1,4 @@
-package src.LXab.utils;
+package LXab.utils;
 
 public class ShutdownHook extends Thread {
     @Override

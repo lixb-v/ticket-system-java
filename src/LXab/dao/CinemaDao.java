@@ -1,8 +1,8 @@
-package src.LXab.dao;
+package LXab.dao;
 
-import src.LXab.db.DbCoon;
-import src.LXab.db.DbClose;
-import src.LXab.utils.ConnectionPool;
+import LXab.db.DbCoon;
+import LXab.db.DbClose;
+import LXab.utils.ConnectionPool;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,7 +14,7 @@ import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
 
-import src.LXab.entity.Cinema;
+import LXab.entity.Cinema;
 
 /**
  * ticket_cinema 表相关操作

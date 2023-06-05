@@ -1,4 +1,4 @@
-package src.LXab.db;
+package LXab.db;
 
 import java.sql.Connection;
 import java.sql.Statement;

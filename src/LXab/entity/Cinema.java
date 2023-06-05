@@ -1,4 +1,4 @@
-package src.LXab.entity;
+package LXab.entity;
 
 /**
  * cinema 电影院实体类
