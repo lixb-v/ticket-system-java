@@ -58,7 +58,7 @@ public class CinemaController {
         newCinema.setName(name);
         newCinema.setAddress(address);
         newCinema.setOpeningTime(openingTime);
-        newCinema.setShutdownTime(shutdownTime);
+        newCinema.setShutDownTime(shutdownTime);
 
         try {
             new CinemaDao().addChinema(newCinema);
@@ -89,7 +89,7 @@ public class CinemaController {
         updateCinema.setName(name);
         updateCinema.setAddress(address);
         updateCinema.setOpeningTime(openingTime);
-        updateCinema.setShutdownTime(shutdownTime);
+        updateCinema.setShutDownTime(shutdownTime);
         try {
             new CinemaDao().updateCinemaById(updateCinema);
         } catch (SQLException e) {

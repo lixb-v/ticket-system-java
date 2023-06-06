@@ -8,7 +8,17 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("1");
+
+        try {
+            boolean bool = CinemaController.class.getClass() == ShutdownHook.class.getClass();
+            System.out.println(bool);
+            Class cs  = Class.forName("LXab.controller.CinemaController");
+            System.out.println(cs.getClass().getMethods());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+//        System.out.println("1");
 //        CinemaController myCinemaController = new CinemaController();
         // 根据id查找影院
 //        myCinemaController.queryCinemaById(2);

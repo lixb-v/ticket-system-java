@@ -18,7 +18,7 @@
 
     <servlet-mapping>
         <servlet-name>CinemaServlet</servlet-name>
-        <url-pattern>/queryCinemaById</url-pattern>
+        <url-pattern>/cinema</url-pattern>
     </servlet-mapping>
 
 </web-app>

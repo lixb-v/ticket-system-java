@@ -38,7 +38,7 @@ public class CinemaDao extends Thread {
                 cinema.setName(res.getString("name"));
                 cinema.setAddress(res.getString("address"));
                 cinema.setOpeningTime(res.getString("opening_time"));
-                cinema.setShutdownTime(res.getString("shutdown_time"));
+                cinema.setShutDownTime(res.getString("shutdown_time"));
                 cinemaList.add(cinema);
             }
         } catch (SQLException e) {
@@ -72,7 +72,7 @@ public class CinemaDao extends Thread {
                 myCinema.setName(res.getString("name"));
                 myCinema.setAddress(res.getString("address"));
                 myCinema.setOpeningTime(res.getString("opening_time"));
-                myCinema.setShutdownTime(res.getString("shutdown_time"));
+                myCinema.setShutDownTime(res.getString("shutdown_time"));
             }
 
         } catch (SQLException e) {
@@ -106,7 +106,7 @@ public class CinemaDao extends Thread {
                 myCinema.setName(res.getString("name"));
                 myCinema.setAddress(res.getString("address"));
                 myCinema.setOpeningTime(res.getString("opening_time"));
-                myCinema.setShutdownTime(res.getString("shutdown_time"));
+                myCinema.setShutDownTime(res.getString("shutdown_time"));
             }
 
         } catch (SQLException | InterruptedException e) {
@@ -138,7 +138,7 @@ public class CinemaDao extends Thread {
                 myCinema.setName(res.getString("name"));
                 myCinema.setAddress(res.getString("address"));
                 myCinema.setOpeningTime(res.getString("opening_time"));
-                myCinema.setShutdownTime(res.getString("shutdown_time"));
+                myCinema.setShutDownTime(res.getString("shutdown_time"));
             }
 
         } catch (SQLException | InterruptedException e) {
@@ -152,7 +152,8 @@ public class CinemaDao extends Thread {
     /**
      * 新增电影院
      * */
-    public void addChinema(Cinema cinema) throws SQLException{
+    public Boolean addChinema(Cinema cinema) throws SQLException{
+        Boolean bool = false;
         Connection coon = DbCoon.getCoon();
         PreparedStatement pstmt = null;
         try {
@@ -178,6 +179,7 @@ public class CinemaDao extends Thread {
                 int id = rs.getInt(1);
                 System.out.println(String.format("新增成功, id: %d", id));
             }
+            bool = true;
         } catch (SQLException e) {
             // 事务-回滚
             coon.rollback();
@@ -187,14 +189,17 @@ public class CinemaDao extends Thread {
             coon.setAutoCommit(true);
             DbClose.close(coon, pstmt);
         }
+
+        return bool;
     }
 
     /**
      * 根据id删除影院
      * */
-    public void deleteById(int id) throws SQLException{
+    public Boolean deleteById(int id) throws SQLException{
         Connection coon = DbCoon.getCoon();
         PreparedStatement pstemt = null;
+        Boolean bool = false;
         try {
             coon.setAutoCommit(false);
             String sql = "DELETE FROM ticket_cinema WHERE id = ?";
@@ -207,7 +212,7 @@ public class CinemaDao extends Thread {
             coon.commit();
 
             System.out.println("影院删除成功");
-
+            bool = true;
         } catch (SQLException e) {
             // 事务-回滚
             coon.rollback();
@@ -216,8 +221,8 @@ public class CinemaDao extends Thread {
             // 事务-设置自动提交
             coon.setAutoCommit(true);
             DbClose.close(coon, pstemt);
-
         }
+        return bool;
     }
 
     /**

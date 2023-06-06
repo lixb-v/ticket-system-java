@@ -17,7 +17,7 @@ public class Cinema {
     private String openingTime;
 
     // 结束影院时间
-    private String shutdownTime;
+    private String shutDownTime;
 
     // get和set方法
     public int getId() { return this.id; }
@@ -32,8 +32,8 @@ public class Cinema {
     public String getOpeningTime() { return this.openingTime; }
     public void setOpeningTime(String openingTime) { this.openingTime = openingTime; }
 
-    public String getShutDownTime() { return this.shutdownTime; }
-    public void setShutdownTime(String shutdownTime) { this.shutdownTime = shutdownTime; }
+    public String getShutDownTime() { return this.shutDownTime; }
+    public void setShutDownTime(String shutdownTime) { this.shutDownTime = shutdownTime; }
 
     @Override
     public String toString() {
@@ -52,7 +52,7 @@ public class Cinema {
 
 
         sbf.append(", 结束营业时间:");
-        sbf.append(this.shutdownTime);
+        sbf.append(this.shutDownTime);
         return sbf.toString();
 //        return String.format("id: %s, 影院名称: %s, 地址: %s, 开始营业时间: %s, 结束营业时间: %s", this.id, this.name, this.address, this.openingTime, this.shutdownTime);
     }
